@@ -5,7 +5,6 @@ require 'nokogiri'              # XML parser
 require 'active_model'          # for validations
 
 class OracleOfBacon
-
   class InvalidError < RuntimeError ; end
   class NetworkError < RuntimeError ; end
   class InvalidKeyError < RuntimeError ; end
@@ -23,8 +22,8 @@ class OracleOfBacon
     # YOUR CODE HERE
   end
 
-  def initialize(api_key='')
-    # your code here
+  def initialize(api_key = '38b99ce9ec87')
+    @api_key = api_key
   end
 
   def find_connections

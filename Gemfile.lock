@@ -51,16 +51,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activemodel (= 4.2.10)
+  activemodel
   byebug
   fakeweb!
   nokogiri
-  rspec (= 3.3.0)
+  rspec
   rspec-collection_matchers
   rspec-its
 
-RUBY VERSION
-   ruby 2.4.0p0
-
 BUNDLED WITH
-   1.16.0
+   1.17.3
