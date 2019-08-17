@@ -43,8 +43,7 @@ class OracleOfBacon
   end
 
   def make_uri_from_arguments
-    # your code here: set the @uri attribute to properly-escaped URI
-    #   constructed from the @from, @to, @api_key arguments
+    @uri = "http://oracleofbacon.org/cgi-bin/xml?p=#{CGI.escape(api_key)}&a=#{CGI.escape(from)}&b=#{CGI.escape(to)}"
   end
 
   class Response
@@ -73,7 +72,7 @@ class OracleOfBacon
       @type = :spellcheck
       @data = @doc.xpath('//match').map(&:text)
     end
-    
+
     def parse_graph_response
       @type = :graph
       @data = @doc.xpath('//actor|//movie').map(&:text)
